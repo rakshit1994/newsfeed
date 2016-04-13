@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Results</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/stylesheets/style.css">
+  </head>
+
+<body>
+
+<div>
+  <table border="1" style="padding-top: 2%">
+  <tr>
+    <th>Title</th>
+    <th>Sentiment</th>
+  </tr>
+  {% for i in range(0,count) %}
+  <tr>    
+    <td>{{paragraph2[i]}}</td>
+    <td>{{paragraph[i]}}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</div>
+      <center>
+      <div>
+    <a href="{{plot_url}}" target="_blank" title="" style="display: block; text-align: center;">
+    <img src="{{plot_png}}" alt="" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+    </a>
+    <script data-plotly="RakshitSingh:50"  src="https://plot.ly/embed.js" async></script>
+</div>
+</center>
+
+</body>
+</html>
+

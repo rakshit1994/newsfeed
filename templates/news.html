@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>News API</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/stylesheets/style.css">
+  </head>
+  <body>
+    <table>
+      <form action="" method="POST">
+      <tr>
+      <td><img class = "newappIcon" src="static/images/ibm.jpg"></td>
+      <td><h3>Go Ahead! Search for a Person:</h3><br><input type="text" name="search" value={{request.form.search}}><br></input></td>
+      <td><h3>Define no. of feeds to fetch:</h3><br><input type="text" name="cnt" value={{request.form.cnt}}><br></input></td>
+      </tr>
+    </table>
+    <br>
+      <table>
+      <center><input type="submit" value="Search"></input><center>
+      </table>
+      </form>
+  </body>
+
+</html>
