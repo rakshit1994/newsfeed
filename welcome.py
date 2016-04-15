@@ -16,7 +16,7 @@ import os,json
 from flask import Flask, jsonify, render_template, redirect, url_for, request
 from urllib import urlopen
 import plotly
-plotly.tools.set_credentials_file(username='RakshitSingh', api_key='1dmoih7dbb')
+plotly.tools.set_credentials_file(username='RakshitSingh', api_key=_YOUR API KEY_)
 import plotly.plotly as py
 import plotly.graph_objs as go
 
@@ -42,7 +42,7 @@ def GetFeed():
             cnt = request.form['cnt']
             print searchfield
         #request.form['title'] = searchfield
-            url = 'https://access.alchemyapi.com/calls/data/GetNews?apikey=edd60853a78c2a0e33859cfff509999b2012ca19&return=enriched.url.title,enriched.url.enrichedTitle.docSentiment,enriched.url.enrichedTitle.taxonomy&start=1459209600&end=1459897200&q.enriched.url.enrichedTitle.entities.entity=|text=%s,type=person|&count=%s&outputMode=json'%(searchfield,cnt)
+            url = 'https://access.alchemyapi.com/calls/data/GetNews?apikey=_YOUR API KEY_&return=enriched.url.title,enriched.url.enrichedTitle.docSentiment,enriched.url.enrichedTitle.taxonomy&start=1459209600&end=1459897200&q.enriched.url.enrichedTitle.entities.entity=|text=%s,type=person|&count=%s&outputMode=json'%(searchfield,cnt)
             url = urlopen(url).read()
             #print url
             result = json.loads(url)
